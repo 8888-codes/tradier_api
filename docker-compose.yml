@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: .docker/api/Dockerfile
+    environment:
+      - DATABASE_URL=postgres://api_user:yet-not-another-real-password@db:5432/api_schema
+      - SECRET_KEY='2qq&&_8cy=h5q!to4nmxhab^na46$b1j27!bqv5ig$p0)-l(fx'
     ports:
     - "5000:5000"
     volumes:

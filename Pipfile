@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "==2.1"
+dj-database-url = "*"
+django-extensions = "*"
+gunicorn = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 
