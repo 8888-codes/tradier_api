@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: .docker/api/Dockerfile
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/app
+
+  redis:
+    image: redis
+
+  redis:
+    image: redis
+
+  db:
+    image: redis
