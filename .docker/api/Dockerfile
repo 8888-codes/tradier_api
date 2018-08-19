@@ -10,7 +10,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY . /app/
-RUN pipenv install
+RUN pipenv install --system
 RUN mkdir -p /var/www/tradier-api/static /var/www/static/
 
 EXPOSE 5000

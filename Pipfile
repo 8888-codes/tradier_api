@@ -9,6 +9,9 @@ dj-database-url = "*"
 django-extensions = "*"
 gunicorn = "*"
 "psycopg2" = "*"
+djangorestframework = "*"
+django-filter = "*"
+markdown = "*"
 
 [dev-packages]
 
