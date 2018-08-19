@@ -6,15 +6,30 @@ services:
       context: .
       dockerfile: .docker/api/Dockerfile
     ports:
-     - "5000:5000"
+    - "5000:5000"
     volumes:
-     - .:/app
+    - .:/app
 
   redis:
-    image: redis
-
-  redis:
-    image: redis
+    build:
+      context: .
+      dockerfile: .docker/redis/Dockerfile
+    ports:
+    - "6379:6379"
+    environment:
+    - REDIS_PASSWORD:not-a-real-password
 
   db:
-    image: redis
+    image: postgres:11
+    restart: always
+    ports:
+    - "5432:5432"
+    volumes:
+    - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: api_schema
+      POSTGRES_USER: api_user
+      POSTGRES_PASSWORD: yet-not-another-real-password
+
+volumes:
+  db_data:

@@ -2,8 +2,8 @@
 
 set -ex
 
-# Verify the app is configured correctly
-python manage.py healthcheck
+# Run any pending migrations
+python manage.py migrate
 
 # Collect the static files we need to boot the app
 python manage.py collectstatic --clear --noinput
