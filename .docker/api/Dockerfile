@@ -11,7 +11,7 @@ WORKDIR /app
 
 COPY . /app/
 RUN pipenv install
-RUN mkdir -p /var/www/tradier-api/static
+RUN mkdir -p /var/www/tradier-api/static /var/www/static/
 
 EXPOSE 5000
 

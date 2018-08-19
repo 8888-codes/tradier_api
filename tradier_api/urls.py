@@ -22,9 +22,6 @@ from tradier_api import settings
 _app_url_patterns = [
     path('admin/', admin.site.urls),
 ]
-_static_url_patterns = static(
-    settings.MEDIA_URL,
-    document_root=settings.MEDIA_ROOT,
-)
+_static_url_patterns = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns = _app_url_patterns + _static_url_patterns
