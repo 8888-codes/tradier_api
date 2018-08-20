@@ -14,7 +14,7 @@ DEBUG = bool(os.environ.get('DEBUG', 'False'))
 DJANGO_TEMPLATE_DEBUG = bool(os.environ.get('DJANGO_TEMPLATE_DEBUG', 'False'))
 
 # Limit the hosts to just this whitelisted set
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 # Application definition
 INSTALLED_APPS = [
